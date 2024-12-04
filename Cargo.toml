@@ -2,5 +2,6 @@
 members = [
     "main",
     "day1",
+    "day2",
     "utils",
 ]

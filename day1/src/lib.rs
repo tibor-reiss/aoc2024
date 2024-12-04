@@ -1,4 +1,4 @@
-use std::{collections::HashMap, hash::Hash};
+use std::collections::HashMap;
 
 use utils;
 
@@ -36,5 +36,5 @@ pub fn main_day1_task2() {
     }
     
     let result: i64 = col1.iter().map(|value| col2_map.get(value).unwrap_or(&0) * value).sum();
-    println!("Day 1 task 1 result is {}", result);
+    println!("Day 1 task 2 result is {}", result);
 }
