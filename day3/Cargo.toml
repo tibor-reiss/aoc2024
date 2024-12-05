@@ -1,11 +1,11 @@
 [package]
-name = "main"
+name = "day3"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-day1 = { path = "../day1" }
-day2 = { path = "../day2" }
-day3 = { path = "../day3" }
+lazy_static = "1.5.0"
+regex = "1.11.1"
+utils = { path = "../utils" }
