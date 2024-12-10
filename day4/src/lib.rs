@@ -62,7 +62,7 @@ pub fn main_day4_task1() {
     for i in 0..x_dim {
         for j in 0..y_dim {
             //Check all directions
-            result += (
+            result +=
                 check_word(&letters, x_dim, y_dim, i, j, Some(false), 1, Some(false), 1, &remaining_letters)
                 + check_word(&letters, x_dim, y_dim, i, j, Some(false), 1, None, 1, &remaining_letters)
                 + check_word(&letters, x_dim, y_dim, i, j, Some(false), 1, Some(true), 1, &remaining_letters)
@@ -70,8 +70,7 @@ pub fn main_day4_task1() {
                 + check_word(&letters, x_dim, y_dim, i, j, None, 1, Some(true), 1, &remaining_letters)
                 + check_word(&letters, x_dim, y_dim, i, j, Some(true), 1, Some(false), 1, &remaining_letters)
                 + check_word(&letters, x_dim, y_dim, i, j, Some(true), 1, None, 1, &remaining_letters)
-                + check_word(&letters, x_dim, y_dim, i, j, Some(true), 1, Some(true), 1, &remaining_letters)
-            );
+                + check_word(&letters, x_dim, y_dim, i, j, Some(true), 1, Some(true), 1, &remaining_letters);
         }
     }
     println!("Day 4 task 1 result is {}", result);
@@ -84,12 +83,11 @@ pub fn main_day4_task2() {
     for i in 0..letters.len()-2 {
         for j in 0..letters.len()-2 {
             if letters[i+1][j+1] != 'A' { continue }
-            if (
-                (letters[i][j] == 'M' && letters[i+2][j] == 'M' && letters[i][j+2] == 'S' && letters[i+2][j+2] == 'S')
+            if (letters[i][j] == 'M' && letters[i+2][j] == 'M' && letters[i][j+2] == 'S' && letters[i+2][j+2] == 'S')
                 || (letters[i][j] == 'M' && letters[i+2][j] == 'S' && letters[i][j+2] == 'M' && letters[i+2][j+2] == 'S')
                 || (letters[i][j] == 'S' && letters[i+2][j] == 'S' && letters[i][j+2] == 'M' && letters[i+2][j+2] == 'M')
                 || (letters[i][j] == 'S' && letters[i+2][j] == 'M' && letters[i][j+2] == 'S' && letters[i+2][j+2] == 'M')
-            ) { result += 1 }
+            { result += 1 }
         }
     }
     

@@ -66,7 +66,7 @@ pub fn main_day5_task1() -> Vec<Vec<u64>> {
     let rules = get_rules();
     let pages = get_pages();
     let mut result = 0;
-    let mut is_wrong = false;
+    let mut is_wrong: bool;
     let mut wrong_pages = vec![];
     //Go through every page. If the intersection between the rules for this page and the numbers before is not empty, it is incorrectly ordered.
     for page in pages {
@@ -74,7 +74,7 @@ pub fn main_day5_task1() -> Vec<Vec<u64>> {
         for (i, value) in page.iter().enumerate() {
             if let Some(set1) = rules.get(value) {
                 let set2 = HashSet::<u64>::from_iter(page[..i].iter().cloned());
-                if let Some(a) = set2.intersection(&set1).next() {
+                if let Some(_) = set2.intersection(&set1).next() {
                     is_wrong = true;
                     break;
                 }
@@ -95,13 +95,6 @@ pub fn main_day5_task1() -> Vec<Vec<u64>> {
 
 pub fn main_day5_task2(wrong_pages: &Vec<Vec<u64>>) {
     let rules = get_rules();
-    let mut result = 0;
-    
-    for page in wrong_pages {
-        let ordered_page = order_page(&rules, page);
-        result += ordered_page[(ordered_page.len() - 1) / 2];
-    }
-
     let result: u64 = wrong_pages
         .iter()
         .map(|page| order_page(&rules, page)[(page.len() - 1) / 2])
