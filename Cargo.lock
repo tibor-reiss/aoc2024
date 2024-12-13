@@ -74,6 +74,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "day11"
+version = "0.1.0"
+dependencies = [
+ "env_logger",
+ "log",
+ "utils",
+]
+
+[[package]]
 name = "day13"
 version = "0.1.0"
 dependencies = [
@@ -218,6 +227,7 @@ name = "main"
 version = "0.1.0"
 dependencies = [
  "day1",
+ "day11",
  "day13",
  "day2",
  "day3",
