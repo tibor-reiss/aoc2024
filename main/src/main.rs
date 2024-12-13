@@ -7,6 +7,7 @@ use day6;
 use day7;
 use day8;
 use day9;
+use day13;
 
 fn main() {
     println!("AOC2024");
@@ -35,6 +36,9 @@ fn main() {
     //day8::main_day8_task1(); // 413
     //day8::main_day8_task2(); // 1417
 
-    day9::main_day9_task1(); // 6461289671426
-    day9::main_day9_task2(); // 6488291456470
+    //day9::main_day9_task1(); // 6461289671426
+    //day9::main_day9_task2(); // 6488291456470
+
+    day13::main_day13_task1();
+    day13::main_day13_task2();
 }
