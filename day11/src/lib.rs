@@ -34,7 +34,7 @@ pub fn main_day11_task1() {
     let mut stones = get_data();
     log::debug!("{stones:?}");
 
-    for i in 1..=25 {
+    for _ in 1..=25 {
         stones = stones.iter().map(|&stone| transform(stone)).flatten().collect();
     }
 
@@ -44,7 +44,7 @@ pub fn main_day11_task1() {
 pub fn main_day11_task2() {
     _ = env_logger::try_init();
     
-    let mut stones = get_data();
+    let stones = get_data();
     log::debug!("{stones:?}");
 
     // Stone number, number of occurrence
@@ -53,7 +53,7 @@ pub fn main_day11_task2() {
         *total_map.entry(v).or_insert(0) += 1;
     }
 
-    for i in 1..=75 {
+    for _ in 1..=75 {
         let mut temp_map: HashMap<u64, u64> = HashMap::new();
         for (stone, occurrence) in total_map {
             for s in transform(stone) {
