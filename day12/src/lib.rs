@@ -199,7 +199,7 @@ pub fn main_day12() {
 
     let result: u32 = garden
         .iter()
-        .map(|(c, plant)|
+        .map(|(_, plant)|
             plant
             .iter()
             .map(|(_, plot)| {

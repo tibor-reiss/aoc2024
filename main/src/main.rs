@@ -49,11 +49,14 @@ fn main() {
     //day11::main_day11_task1(); // 186996
     //day11::main_day11_task2(); // 221683913164898
     
-    day12::main_day12(); // 1344578
+    //day12::main_day12(); // 1344578, 814302
     
     //day13::main_day13_task1(); // 35255
     //day13::main_day13_task2(); // 87582154060429
 
     //day14::main_day14_task1(); // 221655456
     //day14::main_day14_task2(); // 7858
+
+    day15::main_day15_task1(); // 1360570
+    day15::main_day15_task2(); // 1381446
 }
