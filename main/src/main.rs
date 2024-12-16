@@ -57,6 +57,9 @@ fn main() {
     //day14::main_day14_task1(); // 221655456
     //day14::main_day14_task2(); // 7858
 
-    day15::main_day15_task1(); // 1360570
-    day15::main_day15_task2(); // 1381446
+    //day15::main_day15_task1(); // 1360570
+    //day15::main_day15_task2(); // 1381446
+
+    day16::main_day16_task1(); // 95444
+    day16::main_day16_task2(); // 513
 }
