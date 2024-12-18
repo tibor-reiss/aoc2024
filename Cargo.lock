@@ -160,6 +160,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "day18"
+version = "0.1.0"
+dependencies = [
+ "env_logger",
+ "lazy_static",
+ "log",
+ "priority-queue",
+ "regex",
+ "utils",
+]
+
+[[package]]
 name = "day2"
 version = "0.1.0"
 dependencies = [
@@ -322,6 +334,7 @@ dependencies = [
  "day15",
  "day16",
  "day17",
+ "day18",
  "day2",
  "day3",
  "day4",
