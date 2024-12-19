@@ -24,7 +24,7 @@ struct Point {
 }
 
 
-fn get_walls(x_dim: usize, y_dim: usize, take_first: usize) -> HashSet<Point> {
+fn get_walls(take_first: usize) -> HashSet<Point> {
     utils::file_to_iter(FILENAME)
         .take(take_first)
         .map(|line| {
@@ -34,7 +34,7 @@ fn get_walls(x_dim: usize, y_dim: usize, take_first: usize) -> HashSet<Point> {
         .collect::<HashSet<Point>>()
 }
 
-fn get_all_walls(x_dim: usize, y_dim: usize) -> Vec<Point> {
+fn get_all_walls() -> Vec<Point> {
     utils::file_to_iter(FILENAME)
         .map(|line| {
             let caps = BYTES.captures(&line).unwrap();
@@ -106,7 +106,7 @@ fn solve_maze(maze: &HashSet<Point>) -> Option<usize> {
 pub fn main_day18_task1() {
     _ = env_logger::try_init();
 
-    let maze = get_walls(X_DIM, Y_DIM, TAKE_FIRST);
+    let maze = get_walls(TAKE_FIRST);
     render_maze(&maze);
 
     println!("Day 18 task 1 result is {}", solve_maze(&maze).unwrap());
@@ -115,7 +115,7 @@ pub fn main_day18_task1() {
 pub fn main_day18_task2() {
     _ = env_logger::try_init();
 
-    let walls = get_all_walls(X_DIM, Y_DIM);
+    let walls = get_all_walls();
     let mut maze: HashSet<Point> = HashSet::from_iter(walls.iter().take(TAKE_FIRST).cloned());
     let mut next_wall = Point{x:0, y:0};
 
