@@ -3,9 +3,9 @@ use std::collections::HashMap;
 use env_logger;
 use log;
 
-use utils;
+//use utils;
 
-const FILENAME: &str = "day21\\data_sample.txt";
+//const FILENAME: &str = "day21\\data_sample.txt";
 
 fn get_next(c1: char, c2: char) -> &'static str {
     match c1 {
@@ -66,7 +66,7 @@ fn solve(s: &str) -> String {
 pub fn main_day21_task1() {
     _ = env_logger::builder().format_timestamp(None).try_init();
     
-    let v = vec![
+    let _v = vec![
         ("^^^<AvvvA^^Avv>A", 805), // 805A -> 72
         ("^<<A^^A>vvvA>A", 170), // 170A -> 64
         ("^<<A>A^^>AvvvA", 129), // 129A -> 70
@@ -97,7 +97,7 @@ pub fn main_day21_task1() {
         ("<^^A<A>vvA>A", 540), // 540A
     ];
 
-    let mut v_all = vec![v1, v2, v3, v4, v5];
+    let v_all = vec![v1, v2, v3, v4, v5];
     for v in v_all {
         for (s, nr) in v.iter() {
             log::debug!("{} {nr}", solve(&solve(s)).len());
