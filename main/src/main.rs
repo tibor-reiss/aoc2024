@@ -21,6 +21,7 @@ use day20;
 use day21;
 use day22;
 use day23;
+use day24;
 
 fn main() {
     println!("AOC2024");
@@ -91,5 +92,8 @@ fn main() {
     //day22::main_day22_task2(); // 1501
 
     //day23::main_day23_task1(); // 1083
-    day23::main_day23_task2(); // 
+    //day23::main_day23_task2(); // as,bu,cp,dj,ez,fd,hu,it,kj,nx,pp,xh,yu
+
+    day24::main_day24_task1(); // 42049478636360
+    day24::main_day24_task2(); // cph,gws,hgj,nnt,npf,z13,z19,z33
 }
