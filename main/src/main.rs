@@ -94,6 +94,8 @@ fn main() {
     //day23::main_day23_task1(); // 1083
     //day23::main_day23_task2(); // as,bu,cp,dj,ez,fd,hu,it,kj,nx,pp,xh,yu
 
-    day24::main_day24_task1(); // 42049478636360
-    day24::main_day24_task2(); // cph,gws,hgj,nnt,npf,z13,z19,z33
+    //day24::main_day24_task1(); // 42049478636360
+    //day24::main_day24_task2(); // cph,gws,hgj,nnt,npf,z13,z19,z33
+
+    day25::main_day25_task1(); // 3291
 }
